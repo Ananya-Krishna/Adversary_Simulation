@@ -1,4 +1,4 @@
-# Purple Team Adversary Simulation Framework
+# Adversary Simulation Framework
 
 This repository contains a comprehensive purple team adversary simulation framework for testing and validating security controls in a controlled lab environment. The framework includes custom command and control (C2) tooling, detection rules, lab setup, and exercise materials.
 
