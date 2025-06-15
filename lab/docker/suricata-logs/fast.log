@@ -1,0 +1,39 @@
+[1] 15/6/2025 -- 14:41:44 - (suricata.c:1159) <Notice> (LogVersion) -- This is Suricata version 7.0.10 RELEASE running in SYSTEM mode
+[1] 15/6/2025 -- 14:41:44 - (util-cpu.c:182) <Info> (UtilCpuPrintSummary) -- CPUs/cores online: 16
+[1] 15/6/2025 -- 14:41:44 - (suricata.c:2699) <Info> (PostConfLoadedSetup) -- Setting engine mode to IDS mode by default
+[1] 15/6/2025 -- 14:41:44 - (suricata.c:2604) <Info> (PostConfLoadedSetupHostMode) -- No 'host-mode': suricata is in IDS mode, using default setting 'sniffer-only'
+[1] 15/6/2025 -- 14:41:44 - (counters.c:317) <Warning> (StatsInitCtxPostOutput) -- stats are enabled but no loggers are active
+[1] 15/6/2025 -- 14:41:44 - (detect-parse.c:2183) <Error> (SigInitHelper) -- Signature missing required value "sid".
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:183) <Error> (DetectLoadSigFile) -- error parsing signature "alert http $EXTERNAL_NET any -> $HOME_NET any (" from file /etc/suricata/rules/c2_traffic.rules at line 4
+[1] 15/6/2025 -- 14:41:44 - (detect-parse.c:1366) <Error> (SigParseBasics) -- no rule options.
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:183) <Error> (DetectLoadSigFile) -- error parsing signature ")" from file /etc/suricata/rules/c2_traffic.rules at line 13
+[1] 15/6/2025 -- 14:41:44 - (detect-parse.c:2183) <Error> (SigInitHelper) -- Signature missing required value "sid".
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:183) <Error> (DetectLoadSigFile) -- error parsing signature "alert http $HOME_NET any -> $EXTERNAL_NET any (" from file /etc/suricata/rules/c2_traffic.rules at line 16
+[1] 15/6/2025 -- 14:41:44 - (detect-parse.c:1366) <Error> (SigParseBasics) -- no rule options.
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:183) <Error> (DetectLoadSigFile) -- error parsing signature ")" from file /etc/suricata/rules/c2_traffic.rules at line 26
+[1] 15/6/2025 -- 14:41:44 - (detect-parse.c:2183) <Error> (SigInitHelper) -- Signature missing required value "sid".
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:183) <Error> (DetectLoadSigFile) -- error parsing signature "alert http $HOME_NET any -> $EXTERNAL_NET any (" from file /etc/suricata/rules/c2_traffic.rules at line 29
+[1] 15/6/2025 -- 14:41:44 - (detect-parse.c:2183) <Error> (SigInitHelper) -- Signature missing required value "sid".
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:183) <Error> (DetectLoadSigFile) -- error parsing signature ") " from file /etc/suricata/rules/c2_traffic.rules at line 38
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-loader.c:355) <Warning> (SigLoadSignatures) -- 1 rule files specified, but no rules were loaded!
+[1] 15/6/2025 -- 14:41:44 - (util-threshold-config.c:1046) <Info> (SCThresholdConfParseFile) -- Threshold config parsed: 0 rule(s) found
+[1] 15/6/2025 -- 14:41:44 - (detect-engine-build.c:1880) <Info> (SigAddressPrepareStage1) -- 0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1] 15/6/2025 -- 14:41:44 - (runmode-af-packet.c:350) <Warning> (ParseAFPConfig) -- eth0: copy mode activated but no destination iface. Disabling feature
+[1] 15/6/2025 -- 14:41:44 - (util-runmodes.c:254) <Info> (RunModeSetLiveCaptureWorkersForDevice) -- eth0: creating 16 threads
+[12] 15/6/2025 -- 14:41:44 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[13] 15/6/2025 -- 14:41:44 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[14] 15/6/2025 -- 14:41:44 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[15] 15/6/2025 -- 14:41:44 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[16] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[17] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[18] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[19] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[20] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[21] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[22] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[23] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[24] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[25] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[26] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[27] 15/6/2025 -- 14:41:45 - (util-ioctl.c:100) <Info> (GetIfaceMTU) -- eth0: MTU 1500
+[1] 15/6/2025 -- 14:41:45 - (tm-threads.c:1925) <Notice> (TmThreadWaitOnThreadRunning) -- Threads created -> W: 16 FM: 1 FR: 1   Engine started.

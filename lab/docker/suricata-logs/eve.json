@@ -1,0 +1,39 @@
+jsonThis is Suricata version 7.0.10 RELEASE running in SYSTEM mode
+jsonCPUs/cores online: 16
+jsonSetting engine mode to IDS mode by default
+jsonNo 'host-mode': suricata is in IDS mode, using default setting 'sniffer-only'
+jsonstats are enabled but no loggers are active
+jsonSignature missing required value "sid".
+jsonerror parsing signature "alert http $EXTERNAL_NET any -> $HOME_NET any (" from file /etc/suricata/rules/c2_traffic.rules at line 4
+jsonno rule options.
+jsonerror parsing signature ")" from file /etc/suricata/rules/c2_traffic.rules at line 13
+jsonSignature missing required value "sid".
+jsonerror parsing signature "alert http $HOME_NET any -> $EXTERNAL_NET any (" from file /etc/suricata/rules/c2_traffic.rules at line 16
+jsonno rule options.
+jsonerror parsing signature ")" from file /etc/suricata/rules/c2_traffic.rules at line 26
+jsonSignature missing required value "sid".
+jsonerror parsing signature "alert http $HOME_NET any -> $EXTERNAL_NET any (" from file /etc/suricata/rules/c2_traffic.rules at line 29
+jsonSignature missing required value "sid".
+jsonerror parsing signature ") " from file /etc/suricata/rules/c2_traffic.rules at line 38
+json1 rule files specified, but no rules were loaded!
+jsonThreshold config parsed: 0 rule(s) found
+json0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+jsoneth0: copy mode activated but no destination iface. Disabling feature
+jsoneth0: creating 16 threads
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsoneth0: MTU 1500
+jsonThreads created -> W: 16 FM: 1 FR: 1   Engine started.

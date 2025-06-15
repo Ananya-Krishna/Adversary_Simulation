@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Linux target (ARM64 compatible)
+  linux-target:
+    image: arm64v8/ubuntu:20.04
+    container_name: linux-target
+    networks:
+      - purple-team-net
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    volumes:
+      - ./linux-scripts:/scripts
+    command: /bin/bash -c "apt-get update && apt-get install -y curl wget net-tools && tail -f /dev/null"
+
+  # Zeek network monitor (ARM64 compatible)
+  zeek:
+    image: zeek/zeek:latest
+    platform: linux/arm64
+    container_name: zeek
+    networks:
+      - purple-team-net
+    volumes:
+      - ./zeek-logs:/usr/local/zeek/logs
+      - ./zeek-config:/usr/local/zeek/etc
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    command: zeek -i eth0
+
+  # Suricata IDS (ARM64 compatible)
+  suricata:
+    image: jasonish/suricata:latest
+    platform: linux/arm64
+    container_name: suricata
+    networks:
+      - purple-team-net
+    volumes:
+      - ./suricata-logs:/var/log/suricata
+      - ./suricata-rules:/etc/suricata/rules
+      - ./suricata-config:/etc/suricata
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
+    command: suricata -c /etc/suricata/suricata.yaml -i eth0
+
+  # C2 Server (ARM64 compatible)
+  c2-server:
+    build:
+      context: ../../tools/c2_server
+      dockerfile: Dockerfile
+    platform: linux/arm64
+    container_name: c2-server
+    networks:
+      - purple-team-net
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./c2-logs:/logs
+
+networks:
+  purple-team-net:
+    driver: bridge 

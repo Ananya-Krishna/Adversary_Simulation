@@ -1,0 +1,49 @@
+%YAML 1.1
+---
+# Suricata configuration file
+
+# Network interface to monitor
+af-packet:
+  - interface: eth0
+    threads: auto
+    defrag: yes
+    cluster-type: cluster_flow
+    cluster-id: 98
+    copy-mode: tap
+    buffer-size: 32768
+    use-mmap: yes
+    tpacket-v3: yes
+
+# Logging configuration
+logging:
+  default-log-level: info
+  outputs:
+    - console:
+        enabled: yes
+    - file:
+        enabled: yes
+        filename: /var/log/suricata/fast.log
+        format: "[%i] %t - (%f:%l) <%d> (%n) -- "
+        append: yes
+    - file:
+        enabled: yes
+        filename: /var/log/suricata/eve.json
+        types:
+          - alert
+          - http
+          - dns
+          - tls
+        format: json
+
+# Rule configuration
+rule-files:
+  - /etc/suricata/rules/*.rules
+
+# Performance tuning
+runmode: workers
+workers:
+  - worker-name: worker1
+    af-packet: eth0
+    cluster-id: 98
+    cluster-type: cluster_flow
+    balance: active 

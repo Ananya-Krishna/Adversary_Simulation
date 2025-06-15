@@ -1,0 +1,24 @@
+title: C2 Beacon Activity Detection
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects potential C2 beacon activity based on regular HTTP POST requests to a known endpoint
+author: Purple Team
+date: 2024/03/19
+modified: 2024/03/19
+tags:
+    - attack.command_and_control
+    - attack.t1071
+    - attack.t1071.001
+logsource:
+    category: webserver
+    product: nginx
+detection:
+    selection:
+        request_method: POST
+        request_uri: /register
+        status_code: 200
+    condition: selection
+falsepositives:
+    - Legitimate API clients
+    - Automated testing tools
+level: medium 
